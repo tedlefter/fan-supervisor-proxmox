@@ -28,21 +28,26 @@ Temp			| 0Eh | ok  |  3.1 | 49 degrees C
 Temp			| 0Fh | ok  |  3.2 | 52 degrees C
 ```
 Select the sensor id to be monitored and update the `SENSOR_ID` value.
+
 2. Modify the scripts to your needs.
+
 3. Copy the scripts and the service files in their appropriate directories
 ```
 /opt/fan_supervisor/start_fan_supervisor.sh
 /opt/fan_supervisor/stop_fan_supervisor.sh
 /etc/systemd/system/fan_supervisor.service
 ```
+
 4. Reload systemd
 ```
 systemctl daemon-reload
 ```
+
 5. Enable the service to start on boot
 ```
 systemctl enable fan_supervisor
 ```
+
 6. Start the service for current session or reboot
 ```
 systemctl start fan_supervisor

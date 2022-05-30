@@ -1,0 +1,10 @@
+[Unit]
+Description=Custom fan controller
+
+[Service]
+Type=simple
+ExecStart=/opt/fan_supervisor/start_fan_supervisor.sh
+ExecStop=/opt/fan_supervisor/stop_fan_supervisor.sh
+
+[Install]
+WantedBy=multi-user.target
